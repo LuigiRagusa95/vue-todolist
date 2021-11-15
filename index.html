@@ -10,10 +10,26 @@
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js" defer></script>
 		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
 	</head>
 	<body>
-		<div id="root" class="container"></div>
+		<div id="root" class="container">
+			<main class="app-main">
+				<div class="app-section">
+					<section class="app-section-header">
+						<span class="app-section-icon" style="font-size: 32px"><ion-icon name="file-tray-outline"></ion-icon></span>
+						<h1 class="app-section-title">Inbox</h1>
+						<span class="app-section-icon button"><ion-icon name="ellipsis-horizontal"></ion-icon></span>
+					</section>
+					<section class="app-section-input">
+						<span class="app-section-icon"><ion-icon name="add"></ion-icon></span>
+						<input type="text" name="input-add" id="input-add" placeholder="Add Task" />
+					</section>
+					<section class="app-section-list"></section>
+				</div>
+			</main>
+		</div>
+		<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+		<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 	</body>
 </html>

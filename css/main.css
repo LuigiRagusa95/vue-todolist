@@ -231,3 +231,35 @@ body {
 	color: #7f7f85;
 	line-height: 1.5rem;
 }
+
+.app-todos-completed {
+	display: flex;
+	flex-flow: column;
+	margin-top: 2rem;
+	transition: 0.2s ease;
+}
+
+.app-todos-completed-title > * {
+	margin-right: 0.5rem;
+}
+
+.app-todos-completed-title {
+	display: flex;
+	cursor: pointer;
+	padding: 0.5rem;
+	color: #7f7f85;
+	line-height: 1.5rem;
+	font-size: 1.125rem;
+	align-items: center;
+}
+
+.app-todos-completed-title > span:last-child {
+	transition: 0.2s ease;
+}
+.app-todos-completed-title.opened > span:last-child {
+	transform: rotate(180deg);
+}
+/* VUE ANIMATION STUDY */
+.app-todos-completed.menuOpen > li:not(li:first-child) {
+	display: none;
+}

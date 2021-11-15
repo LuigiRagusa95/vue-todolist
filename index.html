@@ -30,7 +30,7 @@
 					</section>
 					<section class="app-section-content">
 						<ul class="app-todos">
-							<li v-for="(todo, index) in todos" class="app-todos-todo">
+							<li v-for="(todo, index) in uniqueValue" class="app-todos-todo">
 								<label :for="todo.id">
 									<input type="checkbox" :checked="todo.completed" :id="todo.id" />
 									<div class="app-todos-todo-checkbox"></div>

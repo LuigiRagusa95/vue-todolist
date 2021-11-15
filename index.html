@@ -21,19 +21,19 @@
 						<h1 class="app-section-title">Inbox</h1>
 						<span class="app-section-icon button"><ion-icon name="ellipsis-horizontal"></ion-icon></span>
 					</section>
-					<section class="app-section-input">
+					<section class="app-section-input" @click="addFocus">
 						<span class="app-section-icon"><ion-icon name="add"></ion-icon></span>
-						<input type="text" name="input-add" id="input-add" placeholder="Add Task" />
+						<input type="text" name="input-add" id="input-add" placeholder="Add Task" v-model="inputValue" ref="inputField" @keyup.enter="addTodo" />
 					</section>
 					<section class="app-section-content">
 						<ul class="app-todos">
-							<li class="app-todos-todo">
-								<label for="key">
-									<input type="checkbox" id="key" />
+							<li v-for="(todo, index) in todos" class="app-todos-todo">
+								<label :for="index">
+									<input type="checkbox" :checked="todo.completed" :id="index" />
 									<div class="app-todos-todo-checkbox"></div>
-									<span class="app-todos-todo-text">Andare a fare la spesa</span>
+									<span class="app-todos-todo-text">{{todo.text}}</span>
 								</label>
-								<span class="app-section-icon button button-delete"><ion-icon name="close-outline"></ion-icon></span>
+								<span class="app-section-icon button button-delete" @click="removeTodo(index)"><ion-icon name="close-outline"></ion-icon></span>
 							</li>
 						</ul>
 					</section>

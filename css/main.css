@@ -17,6 +17,7 @@ body {
 .container {
 	width: 100%;
 	height: 100%;
+	user-select: none;
 	background-color: #28272c;
 }
 
@@ -90,6 +91,7 @@ body {
 	outline: none;
 	font-size: 1rem;
 	appearance: none;
+	color: #f2f2f2;
 	caret-color: #f2f2f2;
 	background-color: transparent;
 }
@@ -113,7 +115,6 @@ body {
 
 .app-todos-todo {
 	display: flex;
-	padding: 0.5rem;
 	align-items: center;
 	transition: 0.2s ease;
 	border-radius: 0.25rem;
@@ -131,6 +132,7 @@ body {
 .app-todos-todo label {
 	width: 100%;
 	display: flex;
+	padding: 0.5rem;
 	color: #f2f2f2;
 	line-height: 2rem;
 	align-items: center;
@@ -178,4 +180,5 @@ body {
 .app-section-icon.button.button-delete {
 	color: #6e7bf2;
 	font-size: 1.25rem;
+	margin-right: 0.5rem;
 }

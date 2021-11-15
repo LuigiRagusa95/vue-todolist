@@ -67,11 +67,22 @@ body {
 
 /* input */
 .app-section-input {
+	width: 100%;
+	display: flex;
+	margin-top: 1rem;
+	align-items: center;
+}
+
+.app-section-input > * {
+	margin-right: 0.5rem;
+}
+
+.app-section-fields {
 	display: flex;
 	cursor: text;
+	flex-grow: 1;
 	padding: 0.5rem;
 	color: #7f7f85;
-	margin-top: 1rem;
 	align-items: center;
 	border-radius: 0.25rem;
 	background-color: #323136;
@@ -81,23 +92,41 @@ body {
 	margin-right: 0.5rem;
 }
 
-.app-section-input > .app-section-icon {
+.app-section-fields > .app-section-icon {
 	font-size: 1.25rem;
 }
 
-.app-section-input > input {
+.app-section-fields > input {
 	width: 100%;
 	border: none;
 	outline: none;
 	font-size: 1rem;
 	appearance: none;
 	color: #f2f2f2;
+	line-height: 1.5rem;
 	caret-color: #f2f2f2;
 	background-color: transparent;
 }
 
-.app-section-input > input::placeholder {
+.app-section-fields > input::placeholder {
 	color: #7f7f85;
+}
+
+.app-section-button {
+	border: none;
+	outline: none;
+	display: flex;
+	cursor: pointer;
+	color: #f2f2f2;
+	appearance: none;
+	font-size: 0.875rem;
+	line-height: 1.5rem;
+	align-items: center;
+	border-radius: 0.25rem;
+	padding: 0.5rem 1rem;
+	justify-content: center;
+	text-transform: uppercase;
+	background-color: #6e7bf2;
 }
 
 /* content */

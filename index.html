@@ -22,14 +22,17 @@
 						<span class="app-section-icon button"><ion-icon name="ellipsis-horizontal"></ion-icon></span>
 					</section>
 					<section class="app-section-input" @click="addFocus">
-						<span class="app-section-icon"><ion-icon name="add"></ion-icon></span>
-						<input type="text" name="input-add" id="input-add" placeholder="Add Task" v-model="inputValue" ref="inputField" @keyup.enter="addTodo" />
+						<div class="app-section-fields">
+							<span class="app-section-icon"><ion-icon name="add"></ion-icon></span>
+							<input type="text" name="input-add" id="input-add" placeholder="Add Task" v-model="inputValue" ref="inputField" @keyup.enter="addTodo" />
+						</div>
+						<button class="app-section-button" @click="addTodo">Aggiungi</button>
 					</section>
 					<section class="app-section-content">
 						<ul class="app-todos">
 							<li v-for="(todo, index) in todos" class="app-todos-todo">
-								<label :for="index">
-									<input type="checkbox" :checked="todo.completed" :id="index" />
+								<label :for="todo.id">
+									<input type="checkbox" :checked="todo.completed" :id="todo.id" />
 									<div class="app-todos-todo-checkbox"></div>
 									<span class="app-todos-todo-text">{{todo.text}}</span>
 								</label>

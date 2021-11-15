@@ -35,6 +35,10 @@
 								</label>
 								<span class="app-section-icon button button-delete" @click="removeTodo(index)"><ion-icon name="close-outline"></ion-icon></span>
 							</li>
+							<li class="app-todos-empty" v-show="emptyState">
+								<div class="app-todos-empty-title">You're all done for today!</div>
+								<div class="app-todos-empty-subtitle">Enjoy your night!</div>
+							</li>
 						</ul>
 					</section>
 				</div>

@@ -9,11 +9,12 @@ new Vue({
 			{ text: "Imparare Vue.js", completed: false },
 		],
 		inputValue: "",
+		emptyState: false,
 	},
 	methods: {
 		removeTodo(index) {
 			this.todos.splice(index, 1);
-			console.log(index);
+			this.emptyList();
 		},
 		clearInput() {
 			this.inputValue = "";
@@ -23,7 +24,11 @@ new Vue({
 		},
 		addTodo() {
 			if (this.inputValue.trim() !== "") this.todos.push({ text: this.inputValue, completed: false });
+			this.emptyList();
 			this.clearInput();
+		},
+		emptyList() {
+			this.todos.length > 0 ? (this.emptyState = false) : (this.emptyState = true);
 		},
 	},
 });

@@ -182,3 +182,23 @@ body {
 	font-size: 1.25rem;
 	margin-right: 0.5rem;
 }
+
+.app-todos-empty {
+	display: flex;
+	margin-top: 1rem;
+	align-items: center;
+	flex-direction: column;
+	justify-content: center;
+}
+.app-todos-empty > .app-todos-empty-title {
+	display: flex;
+	color: #f2f2f2;
+	font-size: 1.5rem;
+	line-height: 2rem;
+}
+.app-todos-empty > .app-todos-empty-subtitle {
+	display: flex;
+	font-size: 1rem;
+	color: #7f7f85;
+	line-height: 1.5rem;
+}

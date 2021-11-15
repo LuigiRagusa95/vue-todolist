@@ -12,12 +12,9 @@ new Vue({
 		uniqueValue: [],
 		emptyState: false,
 	},
-	mounted() {
-		this.addTodo();
-	},
 	methods: {
 		removeTodo(index) {
-			this.uniqueValue.splice(index, 1);
+			this.todos.splice(index, 1);
 			this.checkEmptyList();
 		},
 		clearInput() {
@@ -27,8 +24,10 @@ new Vue({
 			this.$refs.inputField.focus();
 		},
 		addTodo() {
-			if (this.inputValue.trim() !== "") this.todos.push({ id: this.todos.length + 1, text: this.inputValue, completed: false });
-			this.removeDuplicate();
+			const searchInArray = (array, value, key) => array.filter((data) => JSON.stringify(data[key]).toLowerCase() === JSON.stringify(value.toLowerCase()));
+			if (this.inputValue.trim() !== "" && !searchInArray(this.todos, this.inputValue, "text").length > 0) {
+				this.todos.push({ id: this.todos.length + 1, text: this.inputValue, completed: false });
+			}
 			this.clearInput();
 			this.checkEmptyList();
 		},
